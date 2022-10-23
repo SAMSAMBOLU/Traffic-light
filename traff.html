@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .column{
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="column one"></div>
+    <div class="column two "></div>
+    <div class="column three"></div>
+    <button onclick="Next()" class="coloumn">Next</button>
+    
+    <script>
+        let div1=document.querySelector('.one')
+        let div2=document.querySelector('.two')
+        let div3=document.querySelector('.three')
+        
+        let name="color"
+        
+function Next() {
+    // div1.style.backgroundColor='yellow'
+    if (name=="color") {
+      div1.style.backgroundColor='yellow'
+      name="close"
+    } 
+    else if(name=="close") {
+    div2.style.backgroundColor='red'
+    name="open"
+    }
+    else if(name=="open") {
+    div3.style.backgroundColor='green'
+    name="opens"
+    }
+    else if(name=="opens") {
+     div1.style.backgroundColor='green'
+     div2.style.backgroundColor='yellow'
+     div3.style.backgroundColor='red'
+     name="openso"
+    }
+    else if(name=="openso") {
+     div1.style.backgroundColor='red'
+     div2.style.backgroundColor='yellow'
+     div3.style.backgroundColor='green'
+
+    }
+}
+
+
+    </script>
+</body>
+</html>
